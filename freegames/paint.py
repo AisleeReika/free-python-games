@@ -13,6 +13,8 @@ Exercises
 from turtle import *
 from freegames import vector
 
+shape('turtle')
+
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -71,9 +73,11 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('geen'), 'J')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
+
 done()
