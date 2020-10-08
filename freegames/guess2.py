@@ -12,16 +12,16 @@ Exercises
 from random import randint
 
 start = 0
-end = 1000000
+end = 10000
 value = randint(start, end)
 
-print(value)
+print("You can try 10 times")
 print("I'm thinking of a number between", start, "and", end)
 
 guess = None
 i = 0
 while i < 10:
-    text = input("Guess the number: ")
+    text = input("(" + str(i + 1) + "/10) Guess the number: ")
     guess = int(text)
     i = 1 + i
     if guess < value:
