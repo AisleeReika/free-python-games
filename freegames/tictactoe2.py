@@ -49,7 +49,8 @@ def tap(x, y):
     update()
     state['player'] = not player
     a = a + 1
-    print("point:" + str(a))
+    if a % 1 == 0:
+        print("point:" + str(a))
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)

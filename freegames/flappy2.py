@@ -35,9 +35,9 @@ def draw(alive):
     goto(bird.x, bird.y)
 
     if alive:
-        dot(10, 'green')
+        dot(20, 'blue')
     else:
-        dot(10, 'red')
+        dot(20, 'black')
 
     for ball in balls:
         goto(ball.x, ball.y)
