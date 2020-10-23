@@ -1,0 +1,54 @@
+"""Bounce, a simple animation demo.
+
+Exercises
+
+1. Make the ball speed up and down.
+2. Change how the ball bounces when it hits a wall.
+3. Make the ball leave a trail.
+4. Change the ball color based on position.
+   Hint: colormode(255); color(0, 100, 200)
+
+"""
+
+from random import *
+from turtle import *
+from freegames import vector
+a = 0
+def value():
+    "Randomly generate value between (-5, -3) or (3, 5)."
+    return (3 + random() * 2) * choice([1, -1])
+
+ball = vector(0, 0)
+aim = vector(value(), value())
+
+def draw():
+    global a
+    "Move ball and draw game."
+    ball.move(aim)
+
+    x = ball.x
+    y = ball.y
+
+    if x < -200 or x > 200:
+        aim.x = -aim.x
+        a = a + 1
+        print("bounce:" + str(a))
+
+
+    if y < -200 or y > 200:
+        aim.y = -aim.y
+        a = a + 1
+        print("bounce:" + str(a))
+    goto(x, y)
+    clear()
+
+    dot(5)
+
+    ontimer(draw, 10)
+
+setup(420, 420, 370, 0)
+hideturtle()
+tracer(False)
+up()
+draw()
+done()
