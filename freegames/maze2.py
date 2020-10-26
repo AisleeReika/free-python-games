@@ -32,6 +32,7 @@ def tap(x, y):
     global a
     "Draw line and dot for screen tap."
     if abs(x) > 198 or abs(y) > 198:
+        a = 0
         up()
     else:
         down()
