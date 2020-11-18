@@ -32,12 +32,14 @@ def draw():
     aim.rotate(random() * 10 - 5)
 
     pencolor("green")
-    clear()
+
 
     goto(ant.x, ant.y)
     dot(4)
     a = a + 1
-    print("step:" + str(a))
+    if a == 100:
+        clear()
+        a = 0
     if running:
         ontimer(draw, 100)
 

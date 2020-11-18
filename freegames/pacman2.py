@@ -158,7 +158,7 @@ def change(x, y):
         aim.x = x
         aim.y = y
 
-setup(420, 420, 370, 0)
+setup(4200, 4200, 3700, 0)
 hideturtle()
 tracer(False)
 writer.goto(160, 160)
