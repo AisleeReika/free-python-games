@@ -12,6 +12,7 @@ Exercises
 from random import *
 from turtle import *
 from freegames import vector
+z = 1
 a = 0
 bird = vector(0, 0)
 balls = []
@@ -29,19 +30,25 @@ def inside(point):
     return -200 < point.x < 200 and -200 < point.y < 200
 
 def draw(alive):
+    global z
     "Draw screen objects."
     clear()
 
+    z = z + 1
+
     goto(bird.x, bird.y)
 
+    if z == 50:
+        z = 0
+
     if alive:
-        dot(20, 'blue')
+        dot(z, 'blue')
     else:
-        dot(20, 'black')
+        dot(z, 'black')
 
     for ball in balls:
         goto(ball.x, ball.y)
-        dot(20, 'black')
+        dot(z, 'black')
 
     update()
 
